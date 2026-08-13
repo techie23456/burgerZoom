@@ -18,9 +18,22 @@
   
 
     <script>
+       const iframe = document.getElementById("frame");
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+      if (isMobile) {
+
+        iframe.width = "100%"
+
+           console.log("Mobile layout");
+              } else {
+                 iframe.width = "30%"
+                   
+                    }
 
         function scroll(){
-      const iframe = document.getElementById("frame");
+     
+      
     iframe.src="index2.html"
       iframe.onload = () => {
     const win = iframe.contentWindow;
